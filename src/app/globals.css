@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  font-family: sans-serif !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.custom-dropdown {
+  @apply appearance-none bg-gradient-to-r from-red-600 to-slate-100 border rounded-sm p-12 pr-8 text-white font-bold  cursor-pointer;
+  background-clip: padding-box;
+    
+}
+
+.custom-dropdown::after {
+  content: '▼';
+  @apply absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none ;
+}
+
+
